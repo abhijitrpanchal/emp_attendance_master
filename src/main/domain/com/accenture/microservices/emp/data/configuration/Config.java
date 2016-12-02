@@ -25,6 +25,7 @@ public class Config extends AbstractCouchbaseConfiguration {
 	
     @Override
     protected List<String> getBootstrapHosts() {
+    	System.out.println("couchbaseDB.url::" + rootFolderPath);
         return Arrays.asList(rootFolderPath, rootFolderPath);
     }
 

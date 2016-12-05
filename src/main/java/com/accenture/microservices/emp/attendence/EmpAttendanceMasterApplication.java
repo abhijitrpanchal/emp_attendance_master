@@ -22,14 +22,14 @@ import org.springframework.stereotype.Service;
 @SpringBootApplication(scanBasePackages = {"com.accenture.microservices"})
 //@SpringBootApplication(scanBasePackages = { "com.accenture.microservices.emp.data"})
 
-public class EmpAttendanceMasterApplication extends SpringBootServletInitializer{
+public class EmpAttendanceMasterApplication { // extends SpringBootServletInitializer{
 	
 	private static final Logger log = LoggerFactory.getLogger(EmpAttendanceMasterApplication.class);
 
-	@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(EmpAttendanceMasterApplication.class);
-    }
+//	@Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(EmpAttendanceMasterApplication.class);
+//    }
 
 	public static void main(String[] args) {
 		System.out.println("Let's inspect the beans provided by Spring Boot");

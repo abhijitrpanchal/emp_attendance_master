@@ -30,11 +30,11 @@ public class AttendanceAggregator {
 	public static final Logger log = LoggerFactory.getLogger(AttendanceAggregator.class);
 	
 	public AttendanceAggregator(){
-		System.out.println("Inside AttendanceAggregator constructor");
+		log.debug("Inside AttendanceAggregator constructor");
 	}
 	@Bean
 	DayAttendance dayAttendance(){
-		System.out.println("Inside AttendanceAggregator dayAttendance method");
+		log.debug("Inside AttendanceAggregator dayAttendance method");
 		return new DayAttendance();
 	}
 	@Autowired

@@ -29,7 +29,7 @@ public class AttendanceCalculator {
 	public static final Logger log = LoggerFactory.getLogger(AttendanceCalculator.class);
 	
 	public AttendanceCalculator(){
-		System.out.println("Inside AttendanceCalculator constructor");
+		log.debug("Inside AttendanceCalculator constructor");
 	}
 	
 	@Autowired

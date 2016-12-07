@@ -36,7 +36,7 @@ public class EmpAttendanceMasterApplication { // extends SpringBootServletInitia
 		ApplicationContext ctx = SpringApplication.run(EmpAttendanceMasterApplication.class, args);
 		
 			
-					System.out.println("Let's inspect the beans provided by Spring Boot:" + ctx.toString());
+					log.info("Let's inspect the beans provided by Spring Boot:" + ctx.toString());
 					//Getting all the Bean names from ApplicationContext
 				
 					String[] beanNames = ctx.getBeanDefinitionNames();

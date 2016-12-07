@@ -56,7 +56,7 @@ public class AttendanceService {
 	 */
 	public Collection<EmployeeAttendance> getEmployeesAttendance(){
 		Collection<EmployeeAttendance> employeesAttendance = (Collection<EmployeeAttendance>) employeeRepository.findAll();
-		log.info("Service:: EmployeeAttendance Attance retrived: "+employeesAttendance.toString());
+		log.info("Service:: EmployeeAttendance Attendance retrived: "+employeesAttendance.toString());
 		return employeesAttendance;
 		
 	}

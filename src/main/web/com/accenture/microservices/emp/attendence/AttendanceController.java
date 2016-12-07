@@ -36,7 +36,7 @@ public class AttendanceController {
 	
 	@Bean
 	AttendanceCalculator attendanceCalculator(){
-		System.out.println("Inside Attendance Controller");
+		log.debug("Inside Attendance Controller");
 		return new AttendanceCalculator();
 	}
 	
@@ -48,6 +48,7 @@ public class AttendanceController {
 	
 	@RequestMapping(value = "/employee/attendance/{empId}", method=RequestMethod.GET)
 	public Collection<EmployeeAttendance> getEmployeeAttendance(@PathVariable("empId") Integer id){
+		log.info("Employee ID to serach::" + id.toString());
 		Collection<EmployeeAttendance> employeeAttendance = new ArrayList<EmployeeAttendance>();
 		if(id != 0 || id != null){
 			employeeAttendance = this.attendanceCalculator.getCalculateAttendanceEmployee(id);
@@ -56,7 +57,7 @@ public class AttendanceController {
 			return employeeAttendance;
 		}
 		
-		log.info("day attendance: "+employeeAttendance.toString());
+		log.info("day attendance result: "+employeeAttendance.toString());
 		return employeeAttendance;
 	}
 	

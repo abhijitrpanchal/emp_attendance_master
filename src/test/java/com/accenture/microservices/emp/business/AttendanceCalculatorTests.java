@@ -82,6 +82,7 @@ public class AttendanceCalculatorTests {
      */
 	@Test
 	public void getCalculateAttendanceEmployeeJsonCheck() throws Exception {
+		log.info(" Inside getCalculateAttendanceEmployeeJsonCheck");
 		Integer employeeId = ApplicationTestConstants.EMPLOYEE_ID_TEST_BUSINESS;
 		mockMvc.perform(get("/employee/attendance/"+employeeId)).andExpect(status().isOk())
 		.andDo(print())
@@ -98,6 +99,7 @@ public class AttendanceCalculatorTests {
 	 */
 	@Test
 	public void getCalculateAttendanceWithOutEmployeeId() throws Exception {
+		log.info(" Inside getCalculateAttendanceWithOutEmployeeId");
 		MvcResult result = mockMvc.perform(get("/employee/attendance/")).andReturn();
 		if(result.getResponse().getContentAsString() == null){
 			log.info("getCalculateAttendanceWithOutEmployeeId : null array returned");

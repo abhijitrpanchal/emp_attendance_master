@@ -55,6 +55,7 @@ public class EmpAttendanceMasterApplicationTests {
 		log.info(result.getResponse().getContentAsString());
 	}
 
+	
 	protected String json(Object o) throws IOException {
         MockHttpOutputMessage mockHttpOutputMessage = new MockHttpOutputMessage();
         this.mappingJackson2HttpMessageConverter.write(

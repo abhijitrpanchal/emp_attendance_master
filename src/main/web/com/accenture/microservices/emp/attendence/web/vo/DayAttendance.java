@@ -1,4 +1,4 @@
-package com.accenture.microservices.emp.attendence.vo;
+package com.accenture.microservices.emp.attendence.web.vo;
 
 import java.util.Date;
 

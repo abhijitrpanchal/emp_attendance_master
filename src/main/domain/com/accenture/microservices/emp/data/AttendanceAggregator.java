@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.accenture.microservices.emp.attendence.utility.DocumentValidationUtil;
+import com.accenture.microservices.emp.attendence.web.utility.DocumentValidationUtil;
 import com.accenture.microservices.emp.data.service.AttendanceService;
 import com.accenture.microservices.emp.data.service.validation.DocumentValidationServiceUtil;
 

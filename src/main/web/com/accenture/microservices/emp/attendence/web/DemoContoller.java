@@ -1,4 +1,4 @@
-package com.accenture.microservices.emp.attendence;
+package com.accenture.microservices.emp.attendence.web;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

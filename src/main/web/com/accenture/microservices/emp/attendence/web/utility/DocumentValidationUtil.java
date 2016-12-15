@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.accenture.microservices.emp.attendence.utility;
+package com.accenture.microservices.emp.attendence.web.utility;
 
 import java.util.Collection;
 import java.util.HashMap;

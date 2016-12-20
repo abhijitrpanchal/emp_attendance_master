@@ -32,6 +32,13 @@ public class AttendanceCalculator {
 		log.debug("Inside AttendanceCalculator constructor");
 	}
 	
+	public AttendanceCalculator(AttendanceAggregator attendanceAggregator){
+		
+		log.debug("Inside AttendanceCalculator constructor");
+		this .attendanceAggregator = attendanceAggregator;
+	}
+	 
+	
 	@Autowired
 	AttendanceAggregator attendanceAggregator;
 	
@@ -44,6 +51,7 @@ public class AttendanceCalculator {
 
 	
 	public Collection<EmployeeAttendance> getCalculateAttendanceEmployee(Integer empId){
+		log.info("Emp ID passed ::" + empId);
 		Collection<EmployeeAttendance>  employeeAttenance = this.attendanceAggregator.getEmployeeAttendance(empId);
 		return  employeeAttenance;
 	}

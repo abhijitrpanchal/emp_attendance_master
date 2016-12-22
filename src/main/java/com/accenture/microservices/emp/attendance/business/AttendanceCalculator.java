@@ -32,11 +32,7 @@ public class AttendanceCalculator {
 		log.debug("Inside AttendanceCalculator constructor");
 	}
 	
-	public AttendanceCalculator(AttendanceAggregator attendanceAggregator){
-		
-		log.debug("Inside AttendanceCalculator constructor");
-		this .attendanceAggregator = attendanceAggregator;
-	}
+	
 	 
 	
 	@Autowired

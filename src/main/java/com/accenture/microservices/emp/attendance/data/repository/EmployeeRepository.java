@@ -11,7 +11,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.accenture.microservices.emp.attendance.data.EmployeeAttendance;
 
 /**
- * @author j.venugopalan
+ * @author mahima.agarwal
  *
  */
 public interface EmployeeRepository extends CrudRepository<EmployeeAttendance, String>{

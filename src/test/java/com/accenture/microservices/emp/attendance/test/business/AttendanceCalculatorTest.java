@@ -32,19 +32,22 @@ public class AttendanceCalculatorTest {
 	@MockBean 
 	private AttendanceCalculator attendanceCalculator ;
 	
-//	@Bean
-//	AttendanceCalculator AttendanceCalculator(){
-//		System.out.println("Inside AttendanceCalculatorTest :: AttendanceCalculator method");
-//		AttendanceAggregator attendanceAggregator = mock(AttendanceAggregator.class);
-//		attendanceCalculator = new AttendanceCalculator(attendanceAggregator);
-//		return attendanceCalculator;
-//	}
+
 	
 	@Before
     public void setUp() {
 		//attendanceCalculator= Mockito.mock(AttendanceCalculator.class);;
     }
 	
+	  /**
+     * 
+     * @throws Exception
+     * @Description: positive test case- Unit test with parameter employeeId
+     * @param: employeeId
+     * @return: EmployeeAttendance
+     * @expected result: Employee attendance document
+     * 
+     */
 	@Test
 	public void getCalculateAttendanceEmployee() throws Exception {
 		log.info(" Inside AttendanceCalculatorTest getCalculateAttendanceEmployee");
@@ -54,5 +57,24 @@ public class AttendanceCalculatorTest {
 		}
 		
 	}
+	
+	/**
+	 * 
+	 * @throws Exception
+	 * @Description: negative test case- Unit Test with out employeeId
+	 * @param: null
+     * @return: EmployeeAttendance
+     * @expected result: Employee attendance document with null Arraylist
+	 */
+	@Test
+	public void testEmployeeAttendanceNegative() throws Exception {
+		log.info(" Inside AttendanceCalculatorTest getCalculateAttendanceEmployee");
+		Collection<EmployeeAttendance>  employeeAttenance = this.attendanceCalculator.getCalculateAttendanceEmployee(null);
+		if(null == employeeAttenance){
+			log.info("getCalculateAttendanceWithOutEmployeeId : null array returned");
+		}
+		
+	}
+	
 
 }
